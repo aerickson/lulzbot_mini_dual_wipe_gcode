@@ -17,7 +17,7 @@ G1 X45 Y166 F11520 ; move above wiper pad
 G1 Z2.5 F1200 ; push nozzle into wiper
 G1 X42 Y166 Z2 F4000 ; wiping
 G1 X52 Y164 Z2 F4000 ; wiping
-G1 X42 Y173 Z2.5 F4000 ; wiping
+G1 X42 Y166 Z2.5 F4000 ; wiping
 G1 X52 Y164 F4000 ; wiping
 G1 X42 Y166 F4000 ; wiping
 G1 X52 Y164 F4000 ; wiping
