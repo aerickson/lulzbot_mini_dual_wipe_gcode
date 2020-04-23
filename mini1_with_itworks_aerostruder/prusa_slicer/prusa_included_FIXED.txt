@@ -47,7 +47,7 @@ G1 Z3 ; -- Move down to pad
 G1 X85 Y174.5 F4000 ; -- wipe off lint
 G1 X105 Y174 F4000 ; -- wipe off lint
 G1 X65 Y174.5 F4000 ; -- wipe off lint
-G1 X85 Y174 Z0.5 F4000 ; -- wipe off lint
+G1 X85 Y174 Z3.5 F4000 ; -- wipe off lint
 G1 X49 Y174.5 F3000 ; -- wipe off lint
 G1 X69 Y174 F3000 ; -- wipe off lint
 G1 X49 Y174.5 F2000 ; -- wipe off lint
