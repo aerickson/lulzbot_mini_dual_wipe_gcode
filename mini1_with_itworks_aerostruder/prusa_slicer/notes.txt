@@ -1,3 +1,0 @@
-The Prusa original file crashes the head into the secondary wiper.
-
-The FIXED version attempts to fix that.
