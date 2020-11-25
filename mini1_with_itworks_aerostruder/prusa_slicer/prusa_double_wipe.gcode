@@ -1,5 +1,5 @@
 ;This G-Code has been generated specifically for the LulzBot Mini with Aerostruder V1
-; AJE double wipe 11/23/20
+; AJE double wipe 11/24/20
 M73 P0 ; clear GLCD progress bar
 M75 ; Start GLCD Timer
 G26 ; clear potential 'probe fail' condition
@@ -16,9 +16,9 @@ G1 E-15 F75 ; retract filament
 M109 R{first_layer_temperature[0] - 60} ; wait for extruder to reach wiping temp
 G1 X45 Y173 F11520 ; move above wiper pad
 G1 Z0 F1200 ; push nozzle into wiper
-G1 X42 Y173 Z-.5 F4000 ; wiping
-G1 X52 Y171 Z-.5 F4000 ; wiping
-G1 X42 Y173 Z0 F4000 ; wiping
+G1 X42 Y173 Z0.5 F4000 ; wiping
+G1 X52 Y171 Z0.5 F4000 ; wiping
+G1 X42 Y173 Z1 F4000 ; wiping
 G1 X52 Y171 F4000 ; wiping
 G1 X42 Y173 F4000 ; wiping
 G1 X52 Y171 F4000 ; wiping
@@ -41,7 +41,7 @@ G1 X97 Y171 F4000 ; wiping
 G1 X107 Y173 F4000 ; wiping
 G1 X97 Y171 F4000 ; wiping
 G1 X107 Y173 F4000 ; wiping
-G1 X112 Y171 Z-0.5 F1000 ; wiping
+G1 X112 Y171 Z0.5 F1000 ; wiping
 G1 Z4 ; -- raise z prepare for move to secondary wiper
 G1 X105 Y181 ; -- right end of secondary wiper
 G1 Z1 ; -- Move down to pad
