@@ -16,9 +16,9 @@ G1 E-15 F75 ; retract filament
 M109 R{first_layer_temperature[0] - 60} ; wait for extruder to reach wiping temp
 G1 X45 Y173 F11520 ; move above wiper pad
 G1 Z0 F1200 ; push nozzle into wiper
-G1 X42 Y173 Z0.5 F4000 ; wiping
-G1 X52 Y171 Z0.5 F4000 ; wiping
-G1 X42 Y173 Z1 F4000 ; wiping
+G1 X42 Y173 Z1.5 F4000 ; wiping
+G1 X52 Y171 Z1.5 F4000 ; wiping
+G1 X42 Y173 Z2 F4000 ; wiping
 G1 X52 Y171 F4000 ; wiping
 G1 X42 Y173 F4000 ; wiping
 G1 X52 Y171 F4000 ; wiping
@@ -41,14 +41,14 @@ G1 X97 Y171 F4000 ; wiping
 G1 X107 Y173 F4000 ; wiping
 G1 X97 Y171 F4000 ; wiping
 G1 X107 Y173 F4000 ; wiping
-G1 X112 Y171 Z0.5 F1000 ; wiping
+G1 X112 Y171 Z1.5 F1000 ; wiping
 G1 Z4 ; -- raise z prepare for move to secondary wiper
 G1 X105 Y181 ; -- right end of secondary wiper
-G1 Z1 ; -- Move down to pad
+G1 Z2 ; -- Move down to pad
 G1 X85 Y181.5 F4000 ; -- wipe off lint
 G1 X105 Y181 F4000 ; -- wipe off lint
 G1 X65 Y181.5 F4000 ; -- wipe off lint
-G1 X85 Y181 Z0.5 F4000 ; -- wipe off lint
+G1 X85 Y181 Z1.5 F4000 ; -- wipe off lint
 G1 X49 Y181.5 F3000 ; -- wipe off lint
 G1 X69 Y181 F3000 ; -- wipe off lint
 G1 X49 Y181.5 F2000 ; -- wipe off lint
@@ -57,7 +57,7 @@ G28 X0 Y0 ; home X and Y
 G0 X0 Y187 F200 ; move away from endstops
 M109 R{first_layer_temperature[0] - 60} ; wait for extruder to reach probe temp
 M204 S300 ; set probing acceleration
-G29       ; start auto-leveling sequence
+G29 V4    ; start auto-leveling sequence, verbose
 M420 S1   ; enable leveling matrix
 M425 Z    ; use measured Z backlash for compensation
 M425 Z F0 ; turn off measured Z backlash compensation. (if activated in the quality settings, this command will automatically be ignored)
