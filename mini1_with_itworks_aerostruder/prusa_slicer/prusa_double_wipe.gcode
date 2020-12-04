@@ -11,9 +11,9 @@ G92 E0 ; set extruder position to 0
 M140 S{first_layer_bed_temperature[0]} ; start bed heating up
 G28 ; home all axes
 G0 X0 Y187 Z156 F200 ; move away from endstops
-M109 R{first_layer_temperature[0] - 60} ; soften filament before retraction
+M109 R170 ; soften filament before retraction
 G1 E-15 F75 ; retract filament
-M109 R{first_layer_temperature[0] - 60} ; wait for extruder to reach wiping temp
+M109 R170 ; wait for extruder to reach wiping temp
 G1 X45 Y173 F11520 ; move above wiper pad
 G1 Z2.5 F1200 ; push nozzle into wiper
 G1 X42 Y173 Z2 F4000 ; wiping
@@ -55,7 +55,7 @@ G1 X49 Y181.5 F2000 ; -- wipe off lint
 G1 Z10 ; raise extruder
 G28 X0 Y0 ; home X and Y
 G0 X0 Y187 F200 ; move away from endstops
-M109 R{first_layer_temperature[0] - 60} ; wait for extruder to reach probe temp
+M109 R170 ; wait for extruder to reach probe temp
 M204 S300 ; set probing acceleration
 G29 V4    ; start auto-leveling sequence, verbose
 M420 S1   ; enable leveling matrix
