@@ -1,5 +1,9 @@
 ;This G-Code has been generated specifically for the LulzBot Mini with Aerostruder V1
 ; AJE double wipe,  10/11/21
+;
+; works with firmware (use M115 gcode to see):
+;   FIRMWARE_VERSION:1.1.9.34 EXTRUDER_TYPE:Aerostruder
+;
 M73 P0 ; clear GLCD progress bar
 M75 ; Start GLCD Timer
 G26 ; clear potential 'probe fail' condition
